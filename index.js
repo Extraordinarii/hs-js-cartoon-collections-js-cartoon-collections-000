@@ -21,31 +21,31 @@ function summonCaptainPlanet(planeteerCalls){ //function takes in an array calle
   return secondarray //returns the second array now composed of the original array but in all caps + ! at the end
 }
 
-function longPlaneteerCalls(words) { //
-  var string = ""
-for(var i = 0; i<words.length;i++){
-    string = words[i]
-    if(string.length>4){
-      return true
+function longPlaneteerCalls(words) { //function takes in an array of words
+  var string = "" //variable string must be declared to store strings
+for(var i = 0; i<words.length;i++){ // for loop that uses words.length to determine when the loop needs to end 
+    string = words[i] // we assign variable string to = array words with i being the pointer
+    if(string.length>4){ // we have a conditional statement that tests whether the length of the string is greater than 4 
+      return true // should it be true, it returns the value true
     }
 }
- return false
+ return false // if the first conditional statement fails, then it automatically returns false
 }
 
 
-function findTheCheese (foods) {
-  var cheesetester = ""
-  let x="cheddar", y= "gouda", z="camembert"
-  for(var i = 0; i<foods.length; i++){
-    cheesetester = foods[i]
-    if(cheesetester===x){
+function findTheCheese (foods) { //we have a function that accepts a single argument 
+  var cheesetester = "" //we establish a variable that will take a string from the array 
+  let cheddar="cheddar", gouda= "gouda", camembert="camembert" //we initialize 3 variables that will hold the 3 types of cheese 
+  for(var i = 0; i<foods.length; i++){ //we use a for loop with foods.length to determine when the loop will end
+    cheesetester = foods[i] // cheesetester will take the first string in the array foods , namely foods[0] in this scenario 
+    if(cheesetester===cheddar){ // this tests whether or not cheesetester === cheddar
+      return(`${cheesetester}`) // if it's true, it will send the original value of pointer
+    }
+    if(cheesetester===gouda){ // these are the same conditional statements that test whether or not cheesetester is the same as gouda
       return(`${cheesetester}`)
     }
-    if(cheesetester===y){
+    if(cheesetester===camembert){ // conditional statement asking if cheesetester === camembert 
       return(`${cheesetester}`)
     }
-    if(cheesetester===z){
-      return(`${cheesetester}`)
-    }
-  }return("no cheese!")
+  }return("no cheese!") //if all the conditional statements inside the forloop fail, then it will return with the fact that there was no cheese inside said array.
 }
