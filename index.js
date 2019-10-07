@@ -49,3 +49,15 @@ function findTheCheese (foods) { //we have a function that accepts a single argu
     }
   }return("no cheese!") //if all the conditional statements inside the forloop fail, then it will return with the fact that there was no cheese inside said array.
 }
+
+// in the alternative function, we use a nested for loop to compare 2 arrays 
+/* alternative function findTheCheese(foods){
+  const cheese = ["cheddar","gouda","camembert"] // cheese is an array filled with the cheese types we're searching for 
+  for(var i= 0; i<foods.length;i++){ //the first forloop that is responsible for the initial array that was passed to the function 
+    for(var x=0; x<cheese.length;x++){ // the second loop tests to see if any of the cheese === to the food 
+      if(cheese[x]===foods[i]){ // if the statement is true it will return the cheese type that was found 
+        return cheese[x] //the cheese type that is found, it doesn't matter if it's cheese[x] or food[i]
+      }
+    } // once this forloop ends, we go back to the first forloop and we go to foods[1]foods[2] etc etc until we find the cheese 
+  }return "no cheese!"  // this will be returned if the foods array doesn't contain any cheese 
+} */
