@@ -1,7 +1,7 @@
 function dwarfRollCall(dwarves) { //function accepts 1 argument "dwarves" which is an array of string 
   var counter = 1 // this is a separate counter to allow us assign numbers
   var string = "" //variable string must be initialized or "-undefined1. Dopey 2. Grumpy 3. Bashful appear"
-  for(var i = 0; i<dwarves.length; i++){ //we use a for loop to put consecutive items into the variable string 
+  for(var i = dwarves.length/2 ; i<dwarves.length; i++){ //we use a for loop to put consecutive items into the variable string 
    string += (`${counter}. ` + `${dwarves[i]} `) //the variable string is being added the counter & the dwarves with their respective positions according to the pointer i
     counter++ //adds 1 to add to the position of the dwarves 1,2,3 etc 
 }
@@ -32,6 +32,18 @@ for(var i = 0; i<words.length;i++){ // for loop that uses words.length to determ
  return false // if the first conditional statement fails, then it automatically returns false
 }
 
+function wordsWithB(words){
+  var wordsw = []
+  var wordb= "b"
+  var string = words
+for(var i = 0; i<words.length;i++)  
+  
+  if(wordb===string[0]){
+    wordsw
+  }
+  
+}
+
 
 function findTheCheese (foods) { //we have a function that accepts a single argument 
   var cheesetester = "" //we establish a variable that will take a string from the array 
@@ -51,7 +63,7 @@ function findTheCheese (foods) { //we have a function that accepts a single argu
 }
 
 // in the alternative function, we use a nested for loop to compare 2 arrays 
-/* alternative function findTheCheese(foods){
+function findTheCheese(foods){
   const cheese = ["cheddar","gouda","camembert"] // cheese is an array filled with the cheese types we're searching for 
   for(var i= 0; i<foods.length;i++){ //the first forloop that is responsible for the initial array that was passed to the function 
     for(var x=0; x<cheese.length;x++){ // the second loop tests to see if any of the cheese === to the food 
@@ -60,4 +72,4 @@ function findTheCheese (foods) { //we have a function that accepts a single argu
       }
     } // once this forloop ends, we go back to the first forloop and we go to foods[1]foods[2] etc etc until we find the cheese 
   }return "no cheese!"  // this will be returned if the foods array doesn't contain any cheese 
-} */
+}
